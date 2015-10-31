@@ -4,7 +4,7 @@ create table user (
   enabled boolean
 );
 
-create table authorities (
+create table authority (
   username varchar(256),
   authority varchar(256)
 );
