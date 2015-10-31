@@ -3,11 +3,13 @@ package com.exmaple.service;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.IntegrationTest;
 import com.example.persistence.model.User;
 import com.example.service.UserService;
 
+@Transactional
 public class UserServiceTest extends IntegrationTest {
 
 	@Autowired private UserService userService;
