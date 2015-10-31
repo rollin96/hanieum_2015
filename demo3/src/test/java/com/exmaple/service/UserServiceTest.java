@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.IntegrationTest;
+import com.example.service.UserService;
 
 public class UserServiceTest extends IntegrationTest {
 
