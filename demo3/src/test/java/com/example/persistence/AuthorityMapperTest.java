@@ -7,20 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.IntegrationTest;
 
-public class UserMapperTest extends IntegrationTest{
+public class AuthorityMapperTest extends IntegrationTest{
 
 	Logger logger = LoggerFactory.getLogger( this.getClass() );
 	
-	@Autowired UserMapper userMapper;
+	@Autowired AuthorityMapper authorityMapper;
 	
 	@Test
 	public void testFindByName() {
-		logger.info( this.userMapper.findByName("user").toString() );
+		logger.info( this.authorityMapper.findByName("user").toString() );
 	}
-	
-	@Test
-	public void testFindAll() {
-		logger.info( this.userMapper.findAll().toString() );
-	}
-
 }

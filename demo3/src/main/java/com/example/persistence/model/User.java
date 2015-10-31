@@ -1,11 +1,8 @@
 package com.example.persistence.model;
 
-//@Entity
 public class User {
 
-//	@Id
 	private String username;
-//	@Column(nullable = true)
 	private String password;
 	private Boolean enabled;
 	@Override

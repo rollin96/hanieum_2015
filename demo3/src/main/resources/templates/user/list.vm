@@ -1,0 +1,6 @@
+
+<table border=1>
+#foreach( $user in $list )
+    <tr><td>$foreach.count</td><td>$user.username</td></tr>
+#end
+</table>
