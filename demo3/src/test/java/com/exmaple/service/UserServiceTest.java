@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.IntegrationTest;
+import com.example.persistence.model.User;
 import com.example.service.UserService;
 
 public class UserServiceTest extends IntegrationTest {
@@ -13,7 +14,9 @@ public class UserServiceTest extends IntegrationTest {
 	
 	@Test
 	public void testFindByUserName() {
-		Assert.assertNotNull( userService.findByUserName("user"));
+		User user = userService.findByUserName("user");
+		System.out.println(user);
+		Assert.assertNotNull( user );
 	}
 
 	@Test
