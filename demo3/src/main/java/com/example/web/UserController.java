@@ -12,10 +12,12 @@ import com.example.persistence.UserMapper;
 public class UserController {
 
 	@Autowired private UserMapper userMapper;
+//	@Autowired private UserService userService;
 	
 	@RequestMapping("/list")
 	public void getList(Model model) {
 		
 		model.addAttribute("list", this.userMapper.findAll() );
+//		model.addAttribute("list", this.userService.findAll() );
 	}
 }
