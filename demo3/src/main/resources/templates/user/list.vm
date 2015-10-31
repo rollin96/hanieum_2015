@@ -1,6 +1,11 @@
 
 <table border=1>
 #foreach( $user in $list )
-    <tr><td>$foreach.count</td><td>$user.username</td></tr>
+    <tr>
+    	<td>$foreach.count</td>
+    	<td>$user.username</td>
+    	<td>$!user.authority.authority</td>
+    	<td>$user.authority</td>
+    </tr>
 #end
 </table>

@@ -1,6 +1,5 @@
 package com.example.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +27,11 @@ public class UserService {
 	
 	public List<User> findAll() {
 		
-		return new ArrayList<>();
+		List<User> userList = this.userMapper.findAll();
+		
+		for( User u : userList ) {
+			u.setAuthority( this.authorityMapper.findByName( u.getUsername() ) );
+		}
+		return userList;
 	}
 }
